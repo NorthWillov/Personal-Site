@@ -4,6 +4,10 @@ body {
   background-color: #05113c;
 }
 
+i {
+  color: red;
+}
+
 header {
   height: 100vh;
   display: flex;
@@ -16,6 +20,7 @@ li {
   display: flex;
   animation: fadeIn 2s ease-in-out;
   align-items: center;
+  margin: 0 3rem 0rem 3rem
 }
 
 li a {
@@ -34,6 +39,13 @@ li a {
 }
 
 .portfolio {
+  text-decoration: none;
+  animation: fadeIn 2s ease-in-out;
+  display: block;
+  text-align: center;
+}
+.down-icon {
+  animation: fadeIn 2s ease-in-out;
   display: block;
   text-align: center;
 }
