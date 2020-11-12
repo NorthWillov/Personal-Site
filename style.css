@@ -34,7 +34,7 @@ html {
 .container .box .title .block {
   width: 0%;
   height: inherit;
-  background: #ffb510;
+  background: #ee981c;
   position: absolute;
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   display: flex;
@@ -81,7 +81,7 @@ html {
   height: inherit;
   background: #970309;
   position: absolute;
-  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) alternate-reverse;
   animation-delay: 2s;
   display: flex;
 }
@@ -175,4 +175,17 @@ html {
     opacity: 0.5;
   }
 }
-
+@media screen and (max-width: 500px) {
+  .container .box .title h1 {
+    font-size: 24px;
+  }
+  .container .box .title {
+    justify-content: center;
+  }
+  .container .box .role {
+    justify-content: center;
+  }
+  .container .box {
+    width: 90%;
+  }
+}
