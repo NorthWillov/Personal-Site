@@ -1,0 +1,40 @@
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Goldman", cursive, sans-serif;
+  background-color: #05113c;
+}
+
+li {
+  display: block;
+  animation: fadeIn 2s ease-in-out;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.items {
+  display: flex;
+}
+
+.name {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
