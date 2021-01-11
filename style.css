@@ -3,28 +3,13 @@
   padding: 0;
 }
 
-body,
-html {
-  overflow: hidden;
-}
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.container {
-  width: 100%;
+html,
+body {
   height: 100vh;
-  background: #232323;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
 }
-.container .box {
+
+.box {
   width: 360px;
   height: 250px;
   position: relative;
@@ -32,14 +17,14 @@ html {
   justify-content: center;
   flex-direction: column;
 }
-.container .box .title {
+.box .title {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   height: 50px;
 }
-.container .box .title .block {
+.box .title .block {
   width: 0%;
   height: inherit;
   background: #ee981c;
@@ -47,7 +32,7 @@ html {
   animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
   display: flex;
 }
-.container .box .title h1 {
+.box .title h1 {
   font-family: "Goldman", cursive, sans-serif;
   color: #fff;
   font-size: 32px;
@@ -60,7 +45,7 @@ html {
   align-items: baseline;
   position: relative;
 }
-.container .box .title h1 span {
+.box .title h1 span {
   width: 0px;
   height: 0px;
   -webkit-border-radius: 50%;
@@ -76,15 +61,16 @@ html {
   bottom: 13px;
   right: -12px;
 }
-.container .box .role {
+.box .role {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   height: 30px;
   margin-top: -10px;
+  justify-content: center;
 }
-.container .box .role .block {
+.box .role .block {
   width: 0%;
   height: inherit;
   background: #970309;
@@ -93,7 +79,7 @@ html {
   animation-delay: 2s;
   display: flex;
 }
-.container .box .role p {
+.box .role p {
   animation: secFadeIn 2s forwards;
   animation-delay: 3.2s;
   opacity: 0;
@@ -196,4 +182,59 @@ html {
   .container .box {
     width: 90%;
   }
+}
+
+:root {
+  --headerOpacity: 1;
+  --headerScale: 1;
+}
+
+.video-header {
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+.video-header,
+.video-header video,
+.video-header .viewport-header {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-header video {
+  background: brown;
+  object-fit: cover;
+}
+.video-header .viewport-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  opacity: var(--headerOpacity);
+  transform: scale(var(--headerScale));
+}
+
+main {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  padding: 1rem;
+  margin-top: 100vh;
+}
+main::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: -100vh;
+}
+main p {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-size: 20px;
 }
