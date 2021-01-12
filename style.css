@@ -235,3 +235,17 @@ main::before {
 main h1 {
   text-align: center;
 }
+
+.skills {
+  display: flex;
+}
+.skills li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 20px;
+}
+.skills li span {
+  text-align: center;
+}
