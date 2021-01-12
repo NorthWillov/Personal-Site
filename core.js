@@ -1,5 +1,3 @@
-var viewportHeader = document.querySelector(".viewport-header");
-
 document.body.addEventListener("scroll", function (event) {
   var opacity =
     (document.body.offsetHeight - document.body.scrollTop) /
