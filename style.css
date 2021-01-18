@@ -245,7 +245,17 @@ main h1 {
   flex-direction: column;
   justify-content: center;
   margin-right: 40px;
+  transition: transform 0.5s;
+}
+.skills li:hover {
+  transform: scale(1.2);
 }
 .skills li span {
   text-align: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  border-radius: 0.7rem;
+  cursor: pointer;
 }
