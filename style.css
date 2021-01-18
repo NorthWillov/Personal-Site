@@ -226,7 +226,7 @@ body {
   justify-content: center;
   opacity: 1;
   opacity: var(--headerOpacity);
-  transform: scale(var(--headerScale));
+  /* transform: scale(var(--headerScale)); */
 }
 
 main {
